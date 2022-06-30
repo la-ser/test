@@ -23,4 +23,8 @@
     footer {
         background-color: rgb(34, 71, 71);
     }
+
+    .colorMode {
+        background-color: rgb(28, 128, 128);
+    }
 }

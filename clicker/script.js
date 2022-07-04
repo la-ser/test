@@ -14,9 +14,9 @@ function pressMe() {
   //Punktestand auf Seite updaten
   counterEle.innerHTML = points;
 
-  if (points > 1000) {
-    alert("🎉🥳1000 points 🥳🎉")
-  }
+  //if (points > 1000) {
+  //  alert("🎉🥳1000 points 🥳🎉")
+  //}
 }
 
 //shop button wird geklickt

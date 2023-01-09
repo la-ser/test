@@ -2,91 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=2.0, minimum-scale=0.86">
-    <link rel="icon" href="./src/icons/L.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./src/css/all.css">
-
-    <title>laser Inc.</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://la-ser.github.io/src/icons/L.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
-<style>
-    /*@media only screen and (orientation: landscape) {
-        body {
-            background-color: rgb(76, 129, 226);
-        }
-    }*/
-</style>
 
 <body>
-    <div id="sidenav-div" class="sidenav">
-        <a class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#home">Home</a>
-        <a href="#more">More</a>
-        <a href="#about">About</a>
-    </div>
-
-    <div class="header">
-        <a onclick="openNav()" class="logo"><span onclick="openNav()">&#9776; laser Inc.</span></a>
-        <div class="header-right">
-            <a href="#home">Home</a>
-            <a href="#more">More</a>
-            <a href="#about">About</a>
+  <div id="background"></div>
+  <div id="wrapper">
+    <input id="secondroll" name="roll" type="checkbox">
+    <input id="roll" name="roll" type="checkbox">
+    <label for="roll">Roll it!</label>
+    <label for="secondroll"><span>Stop!</span></label>
+    <div id="platform">
+      <div id="dice">
+        <div class="side front">
+          <div class="dot center"></div>
         </div>
+        <div class="side front inner"></div>
+        <div class="side top">
+          <div class="dot dtop dleft"></div>
+          <div class="dot dbottom dright"></div>
+        </div>
+        <div class="side top inner"></div>
+        <div class="side right">
+          <div class="dot dtop dleft"></div>
+          <div class="dot center"></div>
+          <div class="dot dbottom dright"></div>
+        </div>
+        <div class="side right inner"></div>
+        <div class="side left">
+          <div class="dot dtop dleft"></div>
+          <div class="dot dtop dright"></div>
+          <div class="dot dbottom dleft"></div>
+          <div class="dot dbottom dright"></div>
+        </div>
+        <div class="side left inner"></div>
+        <div class="side bottom">
+          <div class="dot center"></div>
+          <div class="dot dtop dleft"></div>
+          <div class="dot dtop dright"></div>
+          <div class="dot dbottom dleft"></div>
+          <div class="dot dbottom dright"></div>
+        </div>
+        <div class="side bottom inner"></div>
+        <div class="side back">
+          <div class="dot dtop dleft"></div>
+          <div class="dot dtop dright"></div>
+          <div class="dot dbottom dleft"></div>
+          <div class="dot dbottom dright"></div>
+          <div class="dot center dleft"></div>
+          <div class="dot center dright"></div>
+        </div>
+        <div class="side back inner"></div>
+        <div class="side cover x"></div>
+        <div class="side cover y"></div>
+        <div class="side cover z"></div>
+      </div>
     </div>
-    <h1 id="home" class="color-white" onclick="colorMode()">Home</h1>
-    <hr class="hr">
-    <p class="color-white center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    <hr class="hr">
-    <a class="center color-gray btn bg-color-white border-round"
-        href="https://la-ser.github.io/old/codeEditor/newest">EDITOR</a>
-    <div class="tooltip center color-darkgray text-bold bg-color-gray"
-        style="padding: 2px 5px 2px 5px; border-radius: 5px;">Preview
-        <iframe id="iframe" style="overflow: none;" width="800" height="600" class="center tooltiptext"
-            src="https://la-ser.github.io/placeholder"></iframe>
-    </div>
-    <hr class="hr">
-    <p class="color-white center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    <hr class="hr">
-    <a class="center color-gray btn bg-color-white border-round" href="https://la-ser.github.io/editor">Download
-        Editor</a>
-    <p class="color-white center">In order to be able to use the codeEditor offline as well, you can now download it as
-        a file for free.</p>
-    <hr class="hr">
-    <a class="center color-gray btn bg-color-white border-round" href="#more">MORE</a>
-    <a class="center color-gray btn bg-color-white border-round" href="#discord">DISCORD</a>
-    <hr class="hr">
-    <a class="center color-gray btn bg-color-white border-round" href="#websites">Websites</a>
-    <div class="tooltip center color-darkgray text-bold bg-color-gray"
-        style="padding: 2px 5px 2px 5px; border-radius: 5px;">Preview
-        <iframe id="iframe" style="overflow: none;" width="800" height="600" class="center tooltiptext"
-            src="https://la-ser.github.io/placeholder"></iframe>
-    </div>
-    <hr class="hr">
-    <h1 id="about" class="about center color-white">About</h1>
-    <hr class="hr">
-    <p class="color-white center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    <hr class="hr">
-    <footer>
-        <p class="center">© 2022 laser Inc.</p>
-    </footer>
-    <a class="scrollToTop" onclick="scrollToTop()">↑</a>
+  </div>
 </body>
-<script src="./src/js/main/script.js"></script>
 
 </html>
